@@ -2,41 +2,26 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="reveal.js/css/theme/white.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
 
-    </style>
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
 
 <body>
 
-    <div class="reveal">
-        <nav class='nav'>
-            <ul>
-                <li><a href="#sl-1">Test</a></li>
-                <li><a href="#sl-2">Test 2</a></li>
-            </ul>
-        </nav>
-        <div class="slides">
-            <section data-transition="slide">
-                <section id="sl-1">
-                    <h2>Test Slide</h2>
-                    <p>Links and Content</p>
-                </section>
+    <nav class="navigation" id="mainNav">
+        <a class="navigation__link" href="#1">Section 1</a>
+        <a class="navigation__link" href="#2">Section 2</a>
 
-                <section id="sl-2">
-                    <h2>Test Slide 2</h2>
-                    <p>Links and Content 2</p>
-                </section>
-            </section>
-        </div>
+    </nav>
+
+    <div class="page-section hero" id="1">
+        <h2>Section 1</h2>
     </div>
-    <script src="reveal.js/js/reveal.js"></script>
-    <script>
-        Reveal.initialize();
-    </script>
+    <div class="page-section" id="2">
+        <h2>Section Two</h2>
+    </div>
 </body>
 
 </html>
