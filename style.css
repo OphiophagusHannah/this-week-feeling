@@ -1,0 +1,38 @@
+.img {
+    max-height: 43rem !important;
+    width: auto !important;
+    border: 0 solid transparent !important;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+.nav {
+    position: fixed; z-index: 100; left: 0; font-size: 16px;
+}
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+/*                display: block;
+    margin-top: 15rem;*/
+    margin-left: 0;
+}
+.nav li {
+    margin-left: 1rem;
+    font-size: 16px;
+}
+.nav a {
+    color: #EE3424 !important;
+}
+.ul {
+    list-style-type: none !important;
+    margin-left: 0 !important;
+}
+.ul li {
+    font-size: 20px;
+}
+.ul a {
+    color: #EE3424!important;
+}
+
+section a {
+    color: #EE3424!important;
+}
