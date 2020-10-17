@@ -30,10 +30,17 @@
                     "item_id": "1",
                     "item_title": "Section 1",
                     "item_content": "Content Section 1",
+                    "sample_link": "XXX",
+                    "sketch_link": "XXX",
+                    "interactive_link": "XXX"
+
                 }, {
                     "item_id": "2",
                     "item_title": "Section 2",
                     "item_content": "Content Section 2",
+                    "sample_link": "",
+                    "sketch_link": "",
+                    "interactive_link": ""
                 }
             ]
         }
@@ -54,13 +61,41 @@
             for (var i = 0; i < data[key].length; i++) {
                 var title = data[key][i].item_title;
                 var desc = data[key][i].item_content;
+                var sample_link = data[key][i].sample_link;
+                var sketch_link = data[key][i].sketch_link;
+                var interactive_link = data[key][i].interactive_link;
                 var id = data[key][i].item_id;
                 var div = document.createElement('div');
                 div.className = 'page-section';
                 div.id = id;
+                if (title) {
+                    title = '<h2>' + title + '</h2>';
+                    div.innerHTML += title;
+                }
 
-                div.innerHTML =
-                    '<h2>' + title + '</h2><p>' + desc + '</p>';
+                if (desc) {
+                    desc = '<p>' + desc + '</p>';
+                    div.innerHTML += desc;
+                }
+
+                if (sample_link) {
+                    sample_link = '<a href="' + sample_link + '">Sample</a>';
+                    div.innerHTML += sample_link;
+                }
+
+
+                if (sketch_link) {
+                    sketch_link = '<a href="' + sketch_link + '">Sketch</a>';
+                    div.innerHTML += sketch_link;
+                }
+
+
+                if (interactive_link) {
+                    interactive_link = '<a href="' + interactive_link + '">Code</a>';
+                    div.innerHTML += interactive_link;
+                }
+
+
                 document.getElementById('item-section').appendChild(div);
             }
         }
