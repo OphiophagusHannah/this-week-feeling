@@ -26,6 +26,11 @@ h2 {
   outline: none;
 }
 
+.page-section p {
+  color: grey;
+  font-weight: 400;
+}
+
 .navigation {
   position: fixed;
   width: 20%;

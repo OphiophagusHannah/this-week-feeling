@@ -22,6 +22,11 @@ h2 {
     &:focus {
         outline: none;
     }
+
+    p {
+        color: grey;
+        font-weight: 400;
+    }
 }
 
 .navigation {

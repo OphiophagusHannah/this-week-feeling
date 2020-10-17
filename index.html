@@ -11,17 +11,61 @@
 <body>
 
     <nav class="navigation" id="mainNav">
-        <a class="navigation__link" href="#1">Section 1</a>
-        <a class="navigation__link" href="#2">Section 2</a>
+        <!-- <a class="navigation__link" href="#1">Section 1</a>
+        <a class="navigation__link" href="#2">Section 2</a> -->
 
     </nav>
+    <div id="item-section">
+        <!-- <div class="page-section" id="1">
+            <h2>Section 1</h2>
+        </div>
+        <div class="page-section" id="2">
+            <h2>Section Two</h2>
+        </div> -->
+    </div>
+    <script>
+        data = {
+            "sections": [
+                {
+                    "item_id": "1",
+                    "item_title": "Section 1",
+                    "item_content": "Content Section 1",
+                }, {
+                    "item_id": "2",
+                    "item_title": "Section 2",
+                    "item_content": "Content Section 2",
+                }
+            ]
+        }
 
-    <div class="page-section hero" id="1">
-        <h2>Section 1</h2>
-    </div>
-    <div class="page-section" id="2">
-        <h2>Section Two</h2>
-    </div>
+        for (var key in data) {
+            for (var i = 0; i < data[key].length; i++) {
+                var title = data[key][i].item_title;
+                var id = data[key][i].item_id;
+                var badge = document.createElement('a');
+                badge.className = 'navigation__link';
+                badge.setAttribute('href', '#' + id);
+
+                badge.innerHTML = title;
+                document.getElementById('mainNav').appendChild(badge);
+            }
+        }
+        for (var key in data) {
+            for (var i = 0; i < data[key].length; i++) {
+                var title = data[key][i].item_title;
+                var desc = data[key][i].item_content;
+                var id = data[key][i].item_id;
+                var div = document.createElement('div');
+                div.className = 'page-section';
+                div.id = id;
+
+                div.innerHTML =
+                    '<h2>' + title + '</h2><p>' + desc + '</p>';
+                document.getElementById('item-section').appendChild(div);
+            }
+        }
+
+    </script>
 </body>
 
 </html>
