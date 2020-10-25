@@ -11,6 +11,7 @@
 <body>
 
     <nav class="navigation" id="mainNav">
+        <h3>This Week Feeling Is...</h3>
         <!-- <a class="navigation__link" href="#1">Section 1</a>
         <a class="navigation__link" href="#2">Section 2</a> -->
 
@@ -28,19 +29,32 @@
             "sections": [
                 {
                     "item_id": "1",
-                    "item_title": "Section 1",
-                    "item_content": "Content Section 1",
-                    "sample_link": "XXX",
-                    "sketch_link": "XXX",
-                    "interactive_link": "XXX"
+                    "item_title": "Drawning Reflection",
+                    "item_content": "Infinity of the Moment",
+                    "image_preview": "preview\\reflectiondrowning_5.jpg",
+                    "sample_link": "",
+                    "sketch_link": "",
+                    "interactive_link": "",
+                    "comming_soon": true
 
                 }, {
                     "item_id": "2",
-                    "item_title": "Section 2",
-                    "item_content": "Content Section 2",
+                    "item_title": "Test",
+                    "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ligula eu sem pharetra euismod a sit amet purus. Maecenas convallis faucibus mattis. Sed tempus vehicula dictum. In vel nisi magna. Nam luctus ullamcorper quam, eget commodo ipsum accumsan nec.",
+                    "image_preview": "preview\\reflectiondrowning_5.jpg",
                     "sample_link": "",
                     "sketch_link": "",
-                    "interactive_link": ""
+                    "interactive_link": "",
+                    "comming_soon": true
+                }, {
+                    "item_id": "3",
+                    "item_title": "Test",
+                    "item_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ligula eu sem pharetra euismod a sit amet purus. Maecenas convallis faucibus mattis. Sed tempus vehicula dictum. In vel nisi magna. Nam luctus ullamcorper quam, eget commodo ipsum accumsan nec.",
+                    "image_preview": "preview\\reflectiondrowning_5.jpg",
+                    "sample_link": "",
+                    "sketch_link": "",
+                    "interactive_link": "",
+                    "comming_soon": false
                 }
             ]
         }
@@ -59,6 +73,9 @@
         }
         for (var key in data) {
             for (var i = 0; i < data[key].length; i++) {
+                var status = data[key][i].comming_soon;
+
+                var preview = data[key][i].image_preview;
                 var title = data[key][i].item_title;
                 var desc = data[key][i].item_content;
                 var sample_link = data[key][i].sample_link;
@@ -68,35 +85,62 @@
                 var div = document.createElement('div');
                 div.className = 'page-section';
                 div.id = id;
+
+                var inner_div = document.createElement('div');
+                inner_div.className = 'inner-section';
+
+                if (preview) {
+                    preview = '<img class="image-preview" src="' + preview + '">';
+
+
+                    if (sketch_link) {
+                        sketch_link = '<a target="_blank" href="' + sketch_link + '">' + preview + '</a>';
+                        div.innerHTML += sketch_link;
+                    }
+
+                    else {
+                        div.innerHTML += preview;
+                    }
+                }
+
                 if (title) {
                     title = '<h2>' + title + '</h2>';
-                    div.innerHTML += title;
+                    inner_div.innerHTML += title;
                 }
 
                 if (desc) {
                     desc = '<p>' + desc + '</p>';
-                    div.innerHTML += desc;
+                    inner_div.innerHTML += desc;
                 }
 
-                if (sample_link) {
-                    sample_link = '<a href="' + sample_link + '">Sample</a>';
-                    div.innerHTML += sample_link;
+                if (status) {
+                    inner_div.innerHTML += "<h3>Comming Soon</h3>";
+
+                } else {
+
+                    if (sample_link) {
+                        sample_link = '<a target="_blank" href="' + sample_link + '">Sample</a>';
+                        inner_div.innerHTML += sample_link;
+                    }
+
+
+                    if (sketch_link) {
+                        sketch_link = '<a target="_blank" href="' + sketch_link + '">Sketch</a>';
+                        inner_div.innerHTML += sketch_link;
+                    }
+
+
+                    if (interactive_link) {
+                        interactive_link = '<a target="_blank" href="' + interactive_link + '">Code</a>';
+                        inner_div.innerHTML += interactive_link;
+                    }
                 }
 
 
-                if (sketch_link) {
-                    sketch_link = '<a href="' + sketch_link + '">Sketch</a>';
-                    div.innerHTML += sketch_link;
-                }
-
-
-                if (interactive_link) {
-                    interactive_link = '<a href="' + interactive_link + '">Code</a>';
-                    div.innerHTML += interactive_link;
-                }
 
 
                 document.getElementById('item-section').appendChild(div);
+                div.appendChild(inner_div);
             }
         }
 
