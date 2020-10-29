@@ -31,7 +31,7 @@
                     "item_id": "1",
                     "item_title": "Drawning Reflection",
                     "item_content": "Infinity of the Moment",
-                    "image_preview": "preview\\reflectiondrowning_5.jpg",
+                    "image_preview": "preview\reflectiondrowning_5.jpg",
                     "sample_link": "",
                     "sketch_link": "",
                     "interactive_link": "",
