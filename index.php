@@ -39,8 +39,8 @@
 
                 }, {
                     "item_id": "2",
-                    "item_title": "Warmth of Autumn",
-                    "item_content": "Curiosity and cozyness",
+                    "item_title": "Mysterious and Dark sides of Hecate",
+                    "item_content": "",
                     "image_preview": "",
                     "sample_link": "",
                     "sketch_link": "",
@@ -122,7 +122,7 @@
 
 
                     if (interactive_link) {
-                        interactive_link = '<a target="_blank" href="' + interactive_link + '">Code</a>';
+                        interactive_link = '<a target="_blank" href="' + interactive_link + '">Process</a>';
                         inner_div.innerHTML += interactive_link;
                     }
                 }
