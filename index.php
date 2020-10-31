@@ -35,7 +35,7 @@
                     "sample_link": "https://virink.com/art/1247424",
                     "sketch_link": "",
                     "interactive_link": "",
-                    "comming_soon": true
+                    "comming_soon": false
 
                 }, {
                     "item_id": "2",
