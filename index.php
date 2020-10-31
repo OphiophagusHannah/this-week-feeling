@@ -32,7 +32,7 @@
                     "item_title": "Drowning Reflection",
                     "item_content": "Infinity of the Moment",
                     "image_preview": "preview\\reflectiondrowning-preview.jpg",
-                    "sample_link": "",
+                    "sample_link": "https://virink.com/art/1247424",
                     "sketch_link": "",
                     "interactive_link": "",
                     "comming_soon": true
@@ -45,7 +45,7 @@
                     "sample_link": "",
                     "sketch_link": "",
                     "interactive_link": "",
-                    "comming_soon": true
+                    "comming_soon": false
                 }
             ]
         }
