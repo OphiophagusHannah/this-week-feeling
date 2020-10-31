@@ -104,7 +104,7 @@
                     inner_div.innerHTML += desc;
                 }
 
-                if (status) {
+                if (status == true ) {
                     inner_div.innerHTML += "<h3>Comming Soon</h3>";
 
                 } else {
