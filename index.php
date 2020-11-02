@@ -40,8 +40,8 @@
                 }, {
                     "item_id": "2",
                     "item_title": "Mysterious and Dark sides of Hecate",
-                    "item_content": "",
-                    "image_preview": "",
+                    "item_content": "Warmth of darkness",
+                    "image_preview": "preview\\mysterious-and-dark-sides-of-hecate-preview.jpg",
                     "sample_link": "",
                     "sketch_link": "",
                     "interactive_link": "",
